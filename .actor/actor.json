@@ -1,0 +1,22 @@
+{
+    "actorSpecification": 1,
+    "name": "multi-source-job-scraper",
+    "title": "Multi-Source Job Scraper",
+    "description": "Scrapes job listings from LinkedIn Jobs, Naukri, and Indeed India. Combines results, removes duplicates, and saves to Apify Dataset.",
+    "version": "1.0",
+    "meta": {
+        "templateId": "playwright-chrome"
+    },
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "categories": [
+        "JOBS",
+        "ECOMMERCE"
+    ],
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 3600,
+        "memoryMbytes": 4096
+    }
+}

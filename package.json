@@ -1,0 +1,29 @@
+{
+    "name": "multi-source-job-scraper",
+    "version": "1.0.0",
+    "description": "Apify Actor that scrapes jobs from LinkedIn, Naukri, and Indeed India",
+    "type": "module",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "node src/main.js",
+        "dev": "apify run --purge",
+        "postinstall": "npx playwright install chromium"
+    },
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.7.0",
+        "crawlee": "^3.16.0",
+        "playwright": "^1.51.0"
+    },
+    "overrides": {
+        "apify": {
+            "@crawlee/core": "$crawlee",
+            "@crawlee/types": "$crawlee",
+            "@crawlee/utils": "$crawlee"
+        }
+    },
+    "author": "",
+    "license": "ISC"
+}

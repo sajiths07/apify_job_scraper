@@ -1,0 +1,46 @@
+{
+    "title": "Multi-Source Job Scraper Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "keyword": {
+            "title": "Job keyword",
+            "type": "string",
+            "description": "Search keyword or job title (e.g. Flutter Developer, Data Analyst).",
+            "editor": "textfield",
+            "prefill": "Flutter Developer",
+            "example": "Flutter Developer"
+        },
+        "location": {
+            "title": "Location",
+            "type": "string",
+            "description": "City or region to search jobs in (e.g. Kochi, Bangalore, Remote).",
+            "editor": "textfield",
+            "prefill": "Kochi",
+            "example": "Kochi"
+        },
+        "sources": {
+            "title": "Job sources",
+            "type": "array",
+            "description": "Select job boards to scrape. Supported values: linkedin, naukri, indeed.",
+            "editor": "select",
+            "items": {
+                "type": "string",
+                "enum": ["linkedin", "naukri", "indeed"],
+                "enumTitles": ["LinkedIn Jobs", "Naukri", "Indeed India"]
+            },
+            "default": ["linkedin", "naukri", "indeed"],
+            "prefill": ["linkedin", "naukri", "indeed"]
+        },
+        "maxItemsPerSource": {
+            "title": "Max items per source",
+            "type": "integer",
+            "description": "Maximum number of job listings to collect from each enabled source.",
+            "minimum": 1,
+            "maximum": 500,
+            "default": 50,
+            "prefill": 50
+        }
+    },
+    "required": ["keyword", "location"]
+}

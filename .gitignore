@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Apify storage
+storage/
+apify_storage/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Playwright
+playwright-report/
+test-results/
+
+# Build
+dist/
+*.tgz

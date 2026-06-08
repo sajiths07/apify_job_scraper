@@ -1,0 +1,25 @@
+# Dependencies (installed inside container)
+node_modules/
+
+# Local Apify storage
+storage/
+apify_storage/
+
+# Git and IDE
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Logs and env
+*.log
+.env
+.env.local
+
+# Playwright test artifacts
+playwright-report/
+test-results/
+
+# OS
+.DS_Store
+Thumbs.db

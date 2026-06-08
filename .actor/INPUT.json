@@ -1,0 +1,6 @@
+{
+  "keyword": "Flutter Developer",
+  "location": "Kochi",
+  "sources": ["linkedin", "naukri", "indeed"],
+  "maxItemsPerSource": 10
+}
